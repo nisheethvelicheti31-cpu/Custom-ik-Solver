@@ -35,20 +35,3 @@ $$\Delta \theta = J^T (J J^T + \lambda^2 I)^{-1} \vec{e}$$
    ```bash
    git clone [https://github.com/nisheethvelicheti31-cpu/Custom-ik-Solver.git](https://github.com/nisheethvelicheti31-cpu/Custom-ik-Solver.git)
    cd Custom-ik-Solver
-Setup Virtual Environment:
-
-Bash
-python3 -m venv venv
-source venv/bin/activate
-Install Dependencies:
-
-Bash
-pip install numpy matplotlib
-🎮 Usage
-Run the main control dashboard:
-
-Bash
-python3 ik_simulator.py
-Use the Target X/Y/Z sliders to move the arm in real-time.
-
-Click HOME POSE to reset the arm to its default configuration and clear tracking errors.
