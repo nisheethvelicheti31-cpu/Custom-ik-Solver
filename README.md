@@ -1,4 +1,3 @@
-Markdown
 # 5-DOF Spatial Manipulator: Precision Control Interface
 **Developed by Nisheeth Chowdary Velicheti** *Robotics Engineering, University of California, Santa Cruz*
 
