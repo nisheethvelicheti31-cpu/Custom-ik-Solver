@@ -1,3 +1,4 @@
+Markdown
 # 5-DOF Spatial Manipulator: Precision Control Interface
 **Developed by Nisheeth Chowdary Velicheti** *Robotics Engineering, University of California, Santa Cruz*
 
@@ -21,11 +22,11 @@ $$y = \sin(\psi) \sum_{i=1}^{n} L_i \cos(\sum_{j=1}^{i} \theta_j)$$
 $$z = \sum_{i=1}^{n} L_i \sin(\sum_{j=1}^{i} \theta_j)$$
 
 ### 2. The Jacobian Matrix ($J$)
-To move the arm, we calculate the Jacobian, which maps joint velocities to Cartesian velocities:
+To move the arm, we calculate the Jacobian, which maps joint velocities to Cartesian velocities. This is essential for converting desired hand movement into individual joint rotations:
 $$J = \frac{\partial \vec{p}}{\partial \vec{\theta}}$$
 
 ### 3. Damped Least Squares (DLS)
-To invert the Jacobian without instability at singularities, we use the DLS method:
+To invert the Jacobian without instability at singularities, we use the DLS method (Levenberg-Marquardt):
 $$\Delta \theta = J^T (J J^T + \lambda^2 I)^{-1} \vec{e}$$
 
 ## 🛠️ Installation & Setup
@@ -34,3 +35,20 @@ $$\Delta \theta = J^T (J J^T + \lambda^2 I)^{-1} \vec{e}$$
    ```bash
    git clone [https://github.com/nisheethvelicheti31-cpu/Custom-ik-Solver.git](https://github.com/nisheethvelicheti31-cpu/Custom-ik-Solver.git)
    cd Custom-ik-Solver
+Setup Virtual Environment:
+
+Bash
+python3 -m venv venv
+source venv/bin/activate
+Install Dependencies:
+
+Bash
+pip install numpy matplotlib
+🎮 Usage
+Run the main control dashboard:
+
+Bash
+python3 ik_simulator.py
+Use the Target X/Y/Z sliders to move the arm in real-time.
+
+Click HOME POSE to reset the arm to its default configuration and clear tracking errors.
