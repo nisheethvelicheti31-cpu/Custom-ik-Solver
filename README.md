@@ -1,7 +1,8 @@
 # 5-DOF Spatial Manipulator: Precision Control Interface
 **Developed by Nisheeth Chowdary Velicheti** *Robotics Engineering, University of California, Santa Cruz*
 
-![Demo](demo.gif)
+![Custom-ik-Solver](https://github.com/user-attachments/assets/962f4a26-0cad-422b-b2b5-94d1c0247b8d)
+
 
 ## 📌 Overview
 This project is a high-performance **3D Inverse Kinematics (IK) Solver** and **Teleoperation Dashboard**. It simulates a 5-Degree-of-Freedom (DOF) robotic arm capable of real-time end-effector tracking in $SE(3)$ space. The system utilizes a **Damped Least Squares (DLS)** Jacobian solver to ensure numerical stability and fluid motion, even near kinematic singularities.
